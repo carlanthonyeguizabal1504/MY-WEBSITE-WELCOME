@@ -1120,6 +1120,10 @@ h2 span {
   text-overflow: ellipsis;
 }
 
+.contact-channel > span:nth-child(2) {
+  min-width: 0;
+}
+
 .contact-channel b { color: var(--energy); }
 
 .availability {
@@ -1491,7 +1495,7 @@ textarea:focus {
   .creator-seal { margin-inline: auto; }
   .creator-copy > p { margin-inline: auto; }
   .creator-tags { justify-content: center; }
-  .creator-meta { grid-template-columns: repeat(3, 1fr); text-align: left; }
+  .creator-meta { grid-template-columns: auto 1fr; text-align: left; }
   .creator-meta strong { margin-bottom: 14px; }
 }
 
@@ -1532,6 +1536,10 @@ textarea:focus {
   .site-footer { padding-block: 34px; flex-direction: column; text-align: center; }
   .modal-details, .console-actions { grid-template-columns: 1fr; }
   .toast { right: 16px; bottom: 78px; }
+}
+
+@media (max-width: 340px) {
+  .site-name > span:last-child { display: none; }
 }
 
 @media (hover: none), (pointer: coarse) {
