@@ -585,6 +585,26 @@ details p {
   background: transparent;
 }
 
+.email-copy {
+  min-height: 38px;
+  border: 0;
+  color: var(--accent);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.feedback-note {
+  max-width: 220px;
+  color: var(--faint);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
 footer {
   min-height: 105px;
   padding: 25px clamp(20px, 4vw, 64px);
@@ -872,7 +892,8 @@ footer strong {
 
   .contact-actions,
   .contact-actions .primary-button,
-  .copy-button {
+  .copy-button,
+  .email-copy {
     width: 100%;
   }
 

@@ -86,11 +86,13 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-document.querySelector("[data-copy-github]").addEventListener("click", async () => {
+document.querySelector("[data-copy-email]").addEventListener("click", async () => {
+  const email = "eguizabalcarl77@gmail.com";
+
   try {
-    await navigator.clipboard.writeText("fuzewuze1504");
-    showToast("GitHub username copied.");
+    await navigator.clipboard.writeText(email);
+    showToast("Email address copied.");
   } catch {
-    showToast("GitHub: fuzewuze1504");
+    showToast(email);
   }
 });
