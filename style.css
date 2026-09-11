@@ -418,3 +418,14 @@ h1 span {
     letter-spacing: 0.22em;
   }
 }
+
+
+.site-footer {
+  padding: 18px 5%;
+  background: #04101f;
+  border-top: 3px solid var(--avengers-red);
+  color: var(--silver);
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
