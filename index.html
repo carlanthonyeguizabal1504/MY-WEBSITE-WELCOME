@@ -5,177 +5,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="An Avengers-inspired student website made by Carl Anthony A. Eguizabal."
+      content="Avengers Hub — an interactive student web experience by Carl Anthony A. Eguizabal."
     />
-    <meta name="theme-color" content="#090d16" />
-    <title>Avengers Hub | Carl Eguizabal</title>
+    <meta name="theme-color" content="#050b16" />
+    <title>Avengers Hub | Carl Anthony A. Eguizabal</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header class="site-header" id="top">
-      <a class="logo" href="#home" aria-label="Avengers Hub home">
-        <span aria-hidden="true">A</span>
-        AVENGERS HUB
+      <a class="site-name" href="#home" aria-label="Avengers Hub home">
+        <span class="mini-mark" aria-hidden="true">A</span>
+        <span>AVENGERS <strong>HUB</strong></span>
       </a>
 
       <button
-        class="menu-button"
+        class="menu-toggle"
         type="button"
-        aria-label="Open menu"
         aria-expanded="false"
-        aria-controls="site-nav"
+        aria-controls="main-navigation"
+        aria-label="Open navigation"
       >
-        <i></i><i></i><i></i>
+        <span></span><span></span><span></span>
       </button>
 
-      <nav id="site-nav" aria-label="Main navigation">
+      <nav id="main-navigation" aria-label="Main navigation">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#work">What I Do</a>
+        <a href="#services">Services</a>
+        <a href="#creator">Creator</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="color-button" type="button" aria-label="Change accent color">
-        <span></span>
+      <button class="mode-toggle" type="button" aria-label="Switch energy color" title="Switch energy color">
+        <span aria-hidden="true">◉</span>
+        <span class="mode-label">ARC BLUE</span>
       </button>
     </header>
 
     <main>
-      <section class="hero page-width" id="home">
+      <section class="hero section-shell" id="home" aria-labelledby="welcome-title">
         <div class="hero-copy reveal">
-          <p class="small-title">SECOND-YEAR BSIT STUDENT OF 21010</p>
-          <h1>Hi, I'm Carl.<br />Welcome to <span>my website.</span></h1>
-          <p class="hero-text">
-            I made this for ITE activity and chose an Avengers theme because
-            I'm a fan of them. I'm still learning, so I also use this page to try out new
-            things in HTML, CSS, and JavaScript.
+          <div class="system-pill"><span></span> SYSTEM ONLINE · SECTOR 616</div>
+          <p class="eyebrow">SECOND-YEAR BSIT STUDENT OF 21010</p>
+          <h1 id="welcome-title">Hi, I'm Carl.<br /><span>Welcome to my website.</span></h1>
+          <p class="intro">
+            I made this for our ITE activity and chose an Avengers theme because
+            I'm a fan. I'm still learning, so I use this page to try new things in
+            HTML, CSS, and JavaScript.
           </p>
-          <div class="hero-buttons">
-            <a class="primary-button" href="#about">Know more</a>
-            <a class="plain-link" href="#work">What I can do <span>→</span></a>
-          </div>
-        </div>
-
-        <div class="hero-art reveal" aria-label="Avengers-inspired letter A">
-          <div class="big-a">A</div>
-          <p>EARTH'S MIGHTIEST HEROES</p>
-          <span class="hero-line"></span>
-        </div>
-      </section>
-
-      <section class="about page-width" id="about">
-        <div class="section-label reveal"><span>01</span> ABOUT</div>
-        <div class="about-layout">
-          <div class="section-heading reveal">
-            <h2>A school activity,<br />made in <span>my style.</span></h2>
-          </div>
-          <div class="about-copy reveal">
-            <p>
-              At first, this was only a simple HTML and CSS activity. i wanted to add
-              a little more personality, so i based the design on something I really
-              like—the Avengers.
-            </p>
-            <p>
-              I kept the page easy to understand, then added a few effects and made
-              sure it also looks good on a phone. It is simple, but it feels like mine.
-            </p>
-
-            <details>
-              <summary>Why Avengers?</summary>
-              <p>
-                I like how every hero brings something different to the team. It is a
-                good reminder that small skills can come together to create something
-                better.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="work-section" id="work">
-        <div class="page-width">
-          <div class="section-label reveal"><span>02</span> WHAT I DO</div>
-          <div class="work-heading reveal">
-            <h2>What i can do<br /><span>so far.</span></h2>
-            <p>These are the parts of web development i've been practicing.</p>
-          </div>
-
-          <div class="card-grid">
-            <article class="skill-card reveal">
-              <span class="card-number">01</span>
-              <h3>Responsive pages</h3>
-              <p>I can adjust a layout so it works on desktop, tablet, and mobile screens.</p>
-              <small>HTML · CSS</small>
-            </article>
-
-            <article class="skill-card reveal">
-              <span class="card-number">02</span>
-              <h3>Simple interactions</h3>
-              <p>I can add working menus, buttons, and small effects using JavaScript.</p>
-              <small>JAVASCRIPT</small>
-            </article>
-
-            <article class="skill-card reveal">
-              <span class="card-number">03</span>
-              <h3>Clean visual design</h3>
-              <p>I can combine colors, spacing, and fonts to give a page its own style.</p>
-              <small>LAYOUT · UI</small>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="signature page-width" aria-labelledby="signature-name">
-        <p class="reveal">MADE AND DESIGNED BY</p>
-        <div class="name-wrap reveal">
-          <span class="name-mark" aria-hidden="true">CAE</span>
-          <h2 id="signature-name">Carl Anthony A.<br /><strong>Eguizabal</strong></h2>
-          <small>Bachelor of Science in Information Technology - 21010</small>
-        </div>
-      </section>
-
-      <section class="contact page-width" id="contact">
-        <div class="contact-box reveal">
-          <div>
-            <div class="section-label"><span>03</span> CONTACT</div>
-            <h2>Visit my portfolio.</h2>
-            <p>
-              You can see my activities and other projects there. After looking
-              around, please leave a quick feedback so i know what i can improve.
-            </p>
-          </div>
-          <div class="contact-actions">
-            <a class="primary-button" href="https://carlanthonyeguizabal1504.github.io/" target="_blank" rel="noreferrer">
-              View my portfolio <span>↗</span>
-            </a>
-            <a class="copy-button" href="https://carlanthonyeguizabal1504.github.io/#feedback" target="_blank" rel="noreferrer">
-              Leave private feedback!! <span>→</span>
-            </a>
-            <a
-              class="copy-button"
-              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eguizabalcarl77@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Email me on Gmail:> <span>↗</span>
-            </a>
-            <button class="email-copy" type="button" data-copy-email>
-              Copy email address?
+          <div class="hero-actions">
+            <a class="button button-primary" href="#about">Explore the Hub <span>↓</span></a>
+            <button class="button button-ghost" type="button" data-open-console>
+              Open Mission Console
             </button>
-            <small class="feedback-note">Feedback is private — only I can read it:))</small>
+          </div>
+          <div class="hero-metrics" aria-label="Project highlights">
+            <div><strong data-count="6">0</strong><span>Hero Files</span></div>
+            <div><strong data-count="14">0</strong><span>Interactions</span></div>
+            <div><strong data-count="100" data-suffix="%">0</strong><span>Responsive</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Swipeable Avengers hero scanner">
+          <div class="panel-topline">
+            <span>AVENGERS // HERO SCANNER</span>
+            <span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          </div>
+          <div class="reactor-wrap">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="hero-mark" aria-hidden="true">A</span>
+            <div class="hero-carousel" tabindex="0" aria-label="Avengers hero cards">
+              <div class="hero-track">
+                <article class="hero-slide active" data-hero="iron-man" aria-hidden="false">
+                  <span class="hero-emblem" aria-hidden="true">IM</span>
+                  <span class="hero-tag">GENIUS INVENTOR</span>
+                  <h3>Iron Man</h3>
+                  <p><strong>Tony Stark</strong> uses an advanced armored suit powered by an arc reactor.</p>
+                  <div class="power-list"><span>ARMOR</span><span>FLIGHT</span><span>REPULSORS</span></div>
+                </article>
+                <article class="hero-slide" data-hero="captain-america" aria-hidden="true">
+                  <span class="hero-emblem" aria-hidden="true">★</span>
+                  <span class="hero-tag">SUPER SOLDIER</span>
+                  <h3>Captain America</h3>
+                  <p><strong>Steve Rogers</strong> leads with enhanced strength, speed, and an iconic shield.</p>
+                  <div class="power-list"><span>STRENGTH</span><span>SHIELD</span><span>LEADERSHIP</span></div>
+                </article>
+                <article class="hero-slide" data-hero="thor" aria-hidden="true">
+                  <span class="hero-emblem" aria-hidden="true">T</span>
+                  <span class="hero-tag">GOD OF THUNDER</span>
+                  <h3>Thor</h3>
+                  <p><strong>Thor Odinson</strong> commands lightning and fights with the enchanted Mjolnir.</p>
+                  <div class="power-list"><span>LIGHTNING</span><span>MJOLNIR</span><span>FLIGHT</span></div>
+                </article>
+                <article class="hero-slide" data-hero="hulk" aria-hidden="true">
+                  <span class="hero-emblem" aria-hidden="true">H</span>
+                  <span class="hero-tag">GAMMA POWERHOUSE</span>
+                  <h3>Hulk</h3>
+                  <p><strong>Bruce Banner</strong> transforms into a nearly unstoppable force of raw power.</p>
+                  <div class="power-list"><span>POWER</span><span>DURABILITY</span><span>HEALING</span></div>
+                </article>
+                <article class="hero-slide" data-hero="black-widow" aria-hidden="true">
+                  <span class="hero-emblem" aria-hidden="true">BW</span>
+                  <span class="hero-tag">MASTER SPY</span>
+                  <h3>Black Widow</h3>
+                  <p><strong>Natasha Romanoff</strong> is an elite operative trained in combat and espionage.</p>
+                  <div class="power-list"><span>STEALTH</span><span>COMBAT</span><span>TACTICS</span></div>
+                </article>
+                <article class="hero-slide" data-hero="hawkeye" aria-hidden="true">
+                  <span class="hero-emblem" aria-hidden="true">H•</span>
+                  <span class="hero-tag">EXPERT MARKSMAN</span>
+                  <h3>Hawkeye</h3>
+                  <p><strong>Clint Barton</strong> never misses and carries specialized arrows for every mission.</p>
+                  <div class="power-list"><span>ARCHERY</span><span>ACCURACY</span><span>AGILITY</span></div>
+                </article>
+              </div>
+            </div>
+            <div class="hero-controls" aria-label="Hero carousel controls">
+              <button class="hero-arrow hero-prev" type="button" aria-label="Previous hero">←</button>
+              <div class="hero-dots" role="tablist" aria-label="Choose a hero"></div>
+              <button class="hero-arrow hero-next" type="button" aria-label="Next hero">→</button>
+            </div>
+          </div>
+          <div class="hero-label">
+            <span>EARTH'S MIGHTIEST HEROES</span>
+            <small>SWIPE · SCROLL · SELECT</small>
+          </div>
+          <div class="panel-status">
+            <span><i></i> NETWORK SECURE</span>
+            <span class="hero-position">FILE 01 / 06</span>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+          <span></span> SCROLL TO ACCESS
+        </a>
+      </section>
+
+      <section class="content-section section-shell" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="section-number">01 // ABOUT</p>
+          <h2 id="about-title">A school activity.<br /><span>Made in my style.</span></h2>
+          <p>
+            This started as a basic HTML and CSS activity. I added an Avengers look,
+            responsive layouts, and interactions to make it feel more personal.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-story glass-card reveal">
+            <p class="card-kicker">WHY AVENGERS?</p>
+            <h3>Different skills, one team</h3>
+            <p>
+              I like how every hero brings something different to the team. It reminds
+              me that small skills can come together to build something better.
+            </p>
+            <div class="story-quote">
+              <span aria-hidden="true">“</span>
+              <p>Simple enough to understand, but still feels like mine.</p>
+            </div>
+          </article>
+
+          <div class="timeline reveal" aria-label="Project development timeline">
+            <div class="timeline-item active">
+              <span>01</span>
+              <div><small>FOUNDATION</small><h3>HTML Structure</h3><p>Clear, semantic, and accessible content.</p></div>
+            </div>
+            <div class="timeline-item">
+              <span>02</span>
+              <div><small>VISUAL SYSTEM</small><h3>Responsive CSS</h3><p>Cinematic layouts that adapt to every screen.</p></div>
+            </div>
+            <div class="timeline-item">
+              <span>03</span>
+              <div><small>POWER-UP</small><h3>JavaScript Interaction</h3><p>Dynamic controls, live feedback, and motion.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section services-section" id="services" aria-labelledby="services-title">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <p class="section-number">02 // WHAT I DO</p>
+            <h2 id="services-title">What I can do.<br /><span>So far.</span></h2>
+            <p>These are the parts of web development I've been practicing.</p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal" data-tilt>
+              <div class="service-index">01</div>
+              <div class="service-icon" aria-hidden="true">⌘</div>
+              <h3>Responsive Pages</h3>
+              <p>I can adjust a layout so it works on desktop, tablet, and mobile screens.</p>
+              <ul><li>Mobile-first layouts</li><li>Accessible structure</li><li>Flexible components</li></ul>
+              <button class="text-button" type="button" data-service="responsive">View capability <span>↗</span></button>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-index">02</div>
+              <div class="service-icon" aria-hidden="true">✦</div>
+              <h3>Simple Interactions</h3>
+              <p>I can add working menus, buttons, hover effects, and useful feedback.</p>
+              <ul><li>Micro-interactions</li><li>Dynamic content</li><li>Form validation</li></ul>
+              <button class="text-button" type="button" data-service="interactive">View capability <span>↗</span></button>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-index">03</div>
+              <div class="service-icon" aria-hidden="true">◈</div>
+              <h3>Clean Visual Design</h3>
+              <p>I can combine colors, spacing, and fonts to give a page its own style.</p>
+              <ul><li>Color systems</li><li>Component styling</li><li>Visual hierarchy</li></ul>
+              <button class="text-button" type="button" data-service="interface">View capability <span>↗</span></button>
+            </article>
+          </div>
+
+          <div class="mission-lab reveal">
+            <div class="lab-intro">
+              <p class="card-kicker">MISSION LAB</p>
+              <h3>How a project gets assembled</h3>
+              <p>Tap each phase to view the workflow.</p>
+            </div>
+            <div class="lab-interface">
+              <div class="lab-tabs" role="tablist" aria-label="Project phases">
+                <button class="active" role="tab" aria-selected="true" data-phase="discover">01 Discover</button>
+                <button role="tab" aria-selected="false" data-phase="design">02 Design</button>
+                <button role="tab" aria-selected="false" data-phase="build">03 Build</button>
+                <button role="tab" aria-selected="false" data-phase="launch">04 Launch</button>
+              </div>
+              <div class="lab-output" role="tabpanel" aria-live="polite">
+                <span>PHASE 01</span>
+                <h4>Discover the mission</h4>
+                <p>Define the goal, audience, content, and exact problem the website must solve.</p>
+                <div class="phase-meter"><i style="--progress: 25%"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="creator-section section-shell" id="creator" aria-labelledby="creator-title">
+        <div class="creator-card reveal" data-tilt>
+          <div class="creator-scan" aria-hidden="true"></div>
+          <div class="creator-seal" aria-hidden="true"><span>CAE</span></div>
+          <div class="creator-copy">
+            <p class="section-number">03 // AUTHORIZED CREATOR</p>
+            <h2 id="creator-title">Carl Anthony A.<br /><span>Eguizabal</span></h2>
+            <p>
+              Second-year BSIT student and the person behind this Avengers-inspired
+              website. I'm currently practicing front-end design, responsive layouts,
+              and interactive web development.
+            </p>
+            <div class="creator-tags"><span>BSIT</span><span>WEB DESIGN</span><span>FRONT-END</span></div>
+          </div>
+          <div class="creator-meta" aria-label="Creator identification">
+            <span>ACCESS LEVEL</span><strong>AVENGER</strong>
+            <span>CREATOR ID</span><strong>CAE-11013</strong>
+            <span>STATUS</span><strong class="online">ACTIVE</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-grid">
+          <div class="contact-copy reveal">
+            <p class="section-number">04 // CONTACT</p>
+            <h2 id="contact-title">Send a mission<br /><span>transmission.</span></h2>
+            <p>
+              View my activities and projects, leave private feedback, or send me
+              an email through Gmail.
+            </p>
+            <a class="contact-channel" href="https://carlanthonyeguizabal1504.github.io/" target="_blank" rel="noreferrer">
+              <span class="channel-icon" aria-hidden="true">CA</span>
+              <span><small>MY MAIN PORTFOLIO</small><strong>View activities and projects</strong></span>
+              <b aria-hidden="true">↗</b>
+            </a>
+            <div class="availability"><i></i><span><strong>Available for learning projects</strong><small>Second-year BSIT student</small></span></div>
+          </div>
+
+          <div class="transmission-panel contact-actions-panel reveal">
+            <div class="form-topline"><span>CONTACT CHANNELS</span><span>SECURE // 616</span></div>
+            <div class="contact-actions">
+              <a class="action-link action-primary" href="https://carlanthonyeguizabal1504.github.io/" target="_blank" rel="noreferrer">
+                <span><small>EXPLORE</small><strong>View my portfolio</strong></span><b>↗</b>
+              </a>
+              <a class="action-link" href="https://carlanthonyeguizabal1504.github.io/#feedback" target="_blank" rel="noreferrer">
+                <span><small>PRIVATE MESSAGE</small><strong>Leave feedback</strong></span><b>→</b>
+              </a>
+              <a class="action-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eguizabalcarl77@gmail.com" target="_blank" rel="noreferrer">
+                <span><small>GMAIL</small><strong>Email me directly</strong></span><b>↗</b>
+              </a>
+              <button class="action-link email-action" type="button" data-copy-email>
+                <span><small>QUICK ACTION</small><strong>Copy email address</strong></span><b>+</b>
+              </button>
+            </div>
+            <p class="privacy-note">Feedback stays private — only I can read it.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <a class="logo footer-logo" href="#top"><span>A</span> AVENGERS HUB</a>
-      <p>Made by <strong>Eguizabal Carl Anthony A.</strong></p>
-      <p>2026 . 11 . 09</p>
+    <footer class="site-footer">
+      <a class="footer-brand" href="#top"><span>A</span> AVENGERS HUB</a>
+      <p>Designed &amp; made by <strong>Eguizabal, Carl Anthony A.</strong></p>
+      <p class="footer-build">HTML · CSS · JAVASCRIPT // 2026</p>
     </footer>
 
     <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
     <div class="toast" role="status" aria-live="polite"></div>
+
+    <dialog class="modal" id="service-modal" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Close dialog">×</button>
+      <p class="card-kicker">CAPABILITY FILE</p>
+      <h2 id="modal-title">Service title</h2>
+      <p id="modal-description"></p>
+      <div class="modal-details" id="modal-details"></div>
+    </dialog>
+
+    <dialog class="modal console-modal" id="mission-console" aria-labelledby="console-title">
+      <button class="modal-close" type="button" aria-label="Close dialog">×</button>
+      <p class="card-kicker">AVENGERS COMMAND NETWORK</p>
+      <h2 id="console-title">Mission Console</h2>
+      <div class="console-screen" aria-live="polite">
+        <p>&gt; Identity verified: GUEST</p>
+        <p>&gt; Hub systems: ONLINE</p>
+        <p>&gt; Select a mission command.</p>
+      </div>
+      <div class="console-actions">
+        <button type="button" data-console-target="about">Scan Project</button>
+        <button type="button" data-console-target="services">View Abilities</button>
+        <button type="button" data-console-target="creator">Identify Creator</button>
+      </div>
+    </dialog>
   </body>
 </html>
