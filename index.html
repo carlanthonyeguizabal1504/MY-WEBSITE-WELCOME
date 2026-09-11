@@ -5,305 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Avengers Hub — an interactive student web experience by Carl Anthony A. Eguizabal."
+      content="An Avengers-inspired student website made by Carl Anthony A. Eguizabal."
     />
-    <meta name="theme-color" content="#050b16" />
-    <title>Avengers Hub | Carl Anthony A. Eguizabal</title>
+    <meta name="theme-color" content="#090d16" />
+    <title>Avengers Hub | Carl Eguizabal</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
     <header class="site-header" id="top">
-      <a class="site-name" href="#home" aria-label="Avengers Hub home">
-        <span class="mini-mark" aria-hidden="true">A</span>
-        <span>AVENGERS <strong>HUB</strong></span>
+      <a class="logo" href="#home" aria-label="Avengers Hub home">
+        <span aria-hidden="true">A</span>
+        AVENGERS HUB
       </a>
 
       <button
-        class="menu-toggle"
+        class="menu-button"
         type="button"
+        aria-label="Open menu"
         aria-expanded="false"
-        aria-controls="main-navigation"
-        aria-label="Open navigation"
+        aria-controls="site-nav"
       >
-        <span></span><span></span><span></span>
+        <i></i><i></i><i></i>
       </button>
 
-      <nav id="main-navigation" aria-label="Main navigation">
+      <nav id="site-nav" aria-label="Main navigation">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#creator">Creator</a>
+        <a href="#work">What I Do</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="mode-toggle" type="button" aria-label="Switch energy color" title="Switch energy color">
-        <span aria-hidden="true">◉</span>
-        <span class="mode-label">ARC BLUE</span>
+      <button class="color-button" type="button" aria-label="Change accent color">
+        <span></span>
       </button>
     </header>
 
     <main>
-      <section class="hero section-shell" id="home" aria-labelledby="welcome-title">
+      <section class="hero page-width" id="home">
         <div class="hero-copy reveal">
-          <div class="system-pill"><span></span> SYSTEM ONLINE · SECTOR 616</div>
-          <p class="eyebrow">EARTH'S MIGHTIEST DIGITAL EXPERIENCE</p>
-          <h1 id="welcome-title">Welcome to the <span>Avengers Hub</span></h1>
-          <p class="intro">
-            A cinematic, interactive web project built by
-            <strong>Carl Anthony A. Eguizabal</strong>—where creative ideas,
-            responsive design, and code assemble in one place.
+          <p class="small-title">FIRST-YEAR BSIT STUDENT</p>
+          <h1>Hi, I'm Carl.<br />Welcome to <span>my website.</span></h1>
+          <p class="hero-text">
+            I made this for a school activity and chose an Avengers theme because
+            I'm a fan. I'm still learning, so I also use this page to try out new
+            things in HTML, CSS, and JavaScript.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#about">Explore the Hub <span>↓</span></a>
-            <button class="button button-ghost" type="button" data-open-console>
-              Open Mission Console
-            </button>
-          </div>
-          <div class="hero-metrics" aria-label="Project highlights">
-            <div><strong data-count="4">0</strong><span>Core Sections</span></div>
-            <div><strong data-count="10">0</strong><span>Interactions</span></div>
-            <div><strong data-count="100" data-suffix="%">0</strong><span>Responsive</span></div>
+          <div class="hero-buttons">
+            <a class="primary-button" href="#about">Know more</a>
+            <a class="plain-link" href="#work">What I can do <span>→</span></a>
           </div>
         </div>
 
-        <div class="hero-visual reveal" data-tilt aria-label="Avengers-inspired interface panel">
-          <div class="panel-topline">
-            <span>STARK // INTERFACE</span>
-            <span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          </div>
-          <div class="reactor-wrap">
-            <span class="orbit orbit-one"></span>
-            <span class="orbit orbit-two"></span>
-            <div class="hero-mark">A</div>
-          </div>
-          <div class="hero-label">
-            <span>AVENGERS</span>
-            <small>ASSEMBLE THE FUTURE</small>
-          </div>
-          <div class="panel-status">
-            <span><i></i> NETWORK SECURE</span>
-            <span>BUILD 09.11.26</span>
-          </div>
+        <div class="hero-art reveal" aria-label="Avengers-inspired letter A">
+          <div class="big-a">A</div>
+          <p>EARTH'S MIGHTIEST HEROES</p>
+          <span class="hero-line"></span>
         </div>
-
-        <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
-          <span></span> SCROLL TO ACCESS
-        </a>
       </section>
 
-      <section class="content-section section-shell" id="about" aria-labelledby="about-title">
-        <div class="section-heading reveal">
-          <p class="section-number">01 // ABOUT</p>
-          <h2 id="about-title">Built like a mission.<br /><span>Designed with purpose.</span></h2>
-          <p>
-            Avengers Hub began as a basic HTML and CSS activity. It now works as a
-            growing showcase of how a simple school project can evolve through
-            creativity, problem-solving, and better code.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <article class="about-story glass-card reveal">
-            <p class="card-kicker">PROJECT ORIGIN</p>
-            <h3>From first build to full experience</h3>
+      <section class="about page-width" id="about">
+        <div class="section-label reveal"><span>01</span> ABOUT</div>
+        <div class="about-layout">
+          <div class="section-heading reveal">
+            <h2>A school activity,<br />made in <span>my style.</span></h2>
+          </div>
+          <div class="about-copy reveal">
             <p>
-              The goal is not only to make a page look good. Every section is made
-              to feel clear, responsive, and alive—from smooth navigation to useful
-              feedback when a visitor interacts with the site.
+              At first, this was only a simple HTML and CSS activity. I wanted to add
+              a little more personality, so I based the design on something I really
+              like—the Avengers.
             </p>
-            <div class="story-quote">
-              <span aria-hidden="true">“</span>
-              <p>Learn the basics. Build with purpose. Improve one project at a time.</p>
-            </div>
-          </article>
+            <p>
+              I kept the page easy to understand, then added a few effects and made
+              sure it also looks good on a phone. It is simple, but it feels like mine.
+            </p>
 
-          <div class="timeline reveal" aria-label="Project development timeline">
-            <div class="timeline-item active">
-              <span>01</span>
-              <div><small>FOUNDATION</small><h3>HTML Structure</h3><p>Clear, semantic, and accessible content.</p></div>
-            </div>
-            <div class="timeline-item">
-              <span>02</span>
-              <div><small>VISUAL SYSTEM</small><h3>Responsive CSS</h3><p>Cinematic layouts that adapt to every screen.</p></div>
-            </div>
-            <div class="timeline-item">
-              <span>03</span>
-              <div><small>POWER-UP</small><h3>JavaScript Interaction</h3><p>Dynamic controls, live feedback, and motion.</p></div>
-            </div>
+            <details>
+              <summary>Why Avengers?</summary>
+              <p>
+                I like how every hero brings something different to the team. It is a
+                good reminder that small skills can come together to create something
+                better.
+              </p>
+            </details>
           </div>
         </div>
       </section>
 
-      <section class="content-section services-section" id="services" aria-labelledby="services-title">
-        <div class="section-shell">
-          <div class="section-heading centered reveal">
-            <p class="section-number">02 // SERVICES</p>
-            <h2 id="services-title">Digital abilities.<br /><span>Ready for deployment.</span></h2>
-            <p>Select a capability to inspect its mission details.</p>
+      <section class="work-section" id="work">
+        <div class="page-width">
+          <div class="section-label reveal"><span>02</span> WHAT I DO</div>
+          <div class="work-heading reveal">
+            <h2>What I can do<br /><span>so far.</span></h2>
+            <p>These are the parts of web development I've been practicing.</p>
           </div>
 
-          <div class="service-grid">
-            <article class="service-card reveal" data-tilt>
-              <div class="service-index">01</div>
-              <div class="service-icon" aria-hidden="true">⌘</div>
-              <h3>Responsive Web Design</h3>
-              <p>Layouts that feel natural on phones, tablets, laptops, and wide screens.</p>
-              <ul><li>Mobile-first layouts</li><li>Accessible structure</li><li>Flexible components</li></ul>
-              <button class="text-button" type="button" data-service="responsive">View capability <span>↗</span></button>
+          <div class="card-grid">
+            <article class="skill-card reveal">
+              <span class="card-number">01</span>
+              <h3>Responsive pages</h3>
+              <p>I can adjust a layout so it works on desktop, tablet, and mobile screens.</p>
+              <small>HTML · CSS</small>
             </article>
 
-            <article class="service-card reveal" data-tilt>
-              <div class="service-index">02</div>
-              <div class="service-icon" aria-hidden="true">✦</div>
-              <h3>Interactive Experiences</h3>
-              <p>Small details and clear feedback that make a website feel responsive and alive.</p>
-              <ul><li>Micro-interactions</li><li>Dynamic content</li><li>Form validation</li></ul>
-              <button class="text-button" type="button" data-service="interactive">View capability <span>↗</span></button>
+            <article class="skill-card reveal">
+              <span class="card-number">02</span>
+              <h3>Simple interactions</h3>
+              <p>I can add working menus, buttons, and small effects using JavaScript.</p>
+              <small>JAVASCRIPT</small>
             </article>
 
-            <article class="service-card reveal" data-tilt>
-              <div class="service-index">03</div>
-              <div class="service-icon" aria-hidden="true">◈</div>
-              <h3>Interface Concepts</h3>
-              <p>Strong visual systems that turn an idea into a clean and memorable interface.</p>
-              <ul><li>Color systems</li><li>Component styling</li><li>Visual hierarchy</li></ul>
-              <button class="text-button" type="button" data-service="interface">View capability <span>↗</span></button>
+            <article class="skill-card reveal">
+              <span class="card-number">03</span>
+              <h3>Clean visual design</h3>
+              <p>I can combine colors, spacing, and fonts to give a page its own style.</p>
+              <small>LAYOUT · UI</small>
             </article>
-          </div>
-
-          <div class="mission-lab reveal">
-            <div class="lab-intro">
-              <p class="card-kicker">MISSION LAB</p>
-              <h3>How a project gets assembled</h3>
-              <p>Tap each phase to view the workflow.</p>
-            </div>
-            <div class="lab-interface">
-              <div class="lab-tabs" role="tablist" aria-label="Project phases">
-                <button class="active" role="tab" aria-selected="true" data-phase="discover">01 Discover</button>
-                <button role="tab" aria-selected="false" data-phase="design">02 Design</button>
-                <button role="tab" aria-selected="false" data-phase="build">03 Build</button>
-                <button role="tab" aria-selected="false" data-phase="launch">04 Launch</button>
-              </div>
-              <div class="lab-output" role="tabpanel" aria-live="polite">
-                <span>PHASE 01</span>
-                <h4>Discover the mission</h4>
-                <p>Define the goal, audience, content, and exact problem the website must solve.</p>
-                <div class="phase-meter"><i style="--progress: 25%"></i></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section class="creator-section section-shell" id="creator" aria-labelledby="creator-title">
-        <div class="creator-card reveal" data-tilt>
-          <div class="creator-scan" aria-hidden="true"></div>
-          <div class="creator-seal" aria-hidden="true"><span>CAE</span></div>
-          <div class="creator-copy">
-            <p class="section-number">03 // AUTHORIZED CREATOR</p>
-            <h2 id="creator-title">Carl Anthony A.<br /><span>Eguizabal</span></h2>
-            <p>
-              First-year BSIT student and the mind behind this Avengers-inspired
-              digital hub. Currently building stronger skills in front-end design,
-              responsive layouts, and interactive web development.
-            </p>
-            <div class="creator-tags"><span>BSIT</span><span>WEB DESIGN</span><span>FRONT-END</span></div>
-            <button class="button button-primary copy-name" type="button" data-copy-name>
-              Copy Creator Name
-            </button>
-          </div>
-          <div class="creator-meta" aria-label="Creator identification">
-            <span>ACCESS LEVEL</span><strong>AVENGER</strong>
-            <span>CREATOR ID</span><strong>CAE-11013</strong>
-            <span>STATUS</span><strong class="online">ACTIVE</strong>
-          </div>
+      <section class="signature page-width" aria-labelledby="signature-name">
+        <p class="reveal">MADE AND DESIGNED BY</p>
+        <div class="name-wrap reveal">
+          <span class="name-mark" aria-hidden="true">CAE</span>
+          <h2 id="signature-name">Carl Anthony A.<br /><strong>Eguizabal</strong></h2>
+          <small>FIRST-YEAR BSIT STUDENT</small>
         </div>
       </section>
 
-      <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-shell contact-grid">
-          <div class="contact-copy reveal">
-            <p class="section-number">04 // CONTACT</p>
-            <h2 id="contact-title">Send a mission<br /><span>transmission.</span></h2>
-            <p>
-              Have a project idea, feedback, or message? Add it to the local mission
-              log or connect through GitHub.
-            </p>
-            <a class="contact-channel" href="https://github.com/fuzewuze1504" target="_blank" rel="noreferrer">
-              <span class="channel-icon" aria-hidden="true">GH</span>
-              <span><small>PRIMARY CHANNEL</small><strong>github.com/fuzewuze1504</strong></span>
-              <b aria-hidden="true">↗</b>
+      <section class="contact page-width" id="contact">
+        <div class="contact-box reveal">
+          <div>
+            <div class="section-label"><span>03</span> CONTACT</div>
+            <h2>Let's connect.</h2>
+            <p>If you want to see my other projects, you can find me on GitHub.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="primary-button" href="https://github.com/fuzewuze1504" target="_blank" rel="noreferrer">
+              Open my GitHub <span>↗</span>
             </a>
-            <div class="availability"><i></i><span><strong>Available for learning projects</strong><small>Response channel: GitHub</small></span></div>
-          </div>
-
-          <div class="transmission-panel reveal">
-            <form id="contact-form" novalidate>
-              <div class="form-topline"><span>SECURE TRANSMISSION</span><span>LOCAL // 616</span></div>
-              <div class="field-row">
-                <label>Call sign<input type="text" name="name" placeholder="Your name" autocomplete="name" required /></label>
-                <label>Return email<input type="email" name="email" placeholder="you@email.com" autocomplete="email" required /></label>
-              </div>
-              <label>Mission type
-                <select name="type" required>
-                  <option value="">Select a mission</option>
-                  <option>Website Project</option>
-                  <option>Design Feedback</option>
-                  <option>School Collaboration</option>
-                  <option>General Message</option>
-                </select>
-              </label>
-              <label>Message
-                <textarea name="message" rows="5" maxlength="300" placeholder="Enter transmission details..." required></textarea>
-                <small class="char-count">0 / 300</small>
-              </label>
-              <p class="form-note">Demo mode: submissions are saved only in this browser.</p>
-              <button class="button button-primary submit-button" type="submit">Save Transmission <span>→</span></button>
-            </form>
-            <div class="mission-log" id="mission-log" hidden>
-              <div><span>RECENT LOCAL TRANSMISSIONS</span><button type="button" data-clear-log>Clear</button></div>
-              <ul></ul>
-            </div>
+            <button class="copy-button" type="button" data-copy-github>
+              Copy username
+            </button>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <a class="footer-brand" href="#top"><span>A</span> AVENGERS HUB</a>
-      <p>Designed &amp; made by <strong>Eguizabal, Carl Anthony A.</strong></p>
-      <p class="footer-build">HTML · CSS · JAVASCRIPT // 2026</p>
+    <footer>
+      <a class="logo footer-logo" href="#top"><span>A</span> AVENGERS HUB</a>
+      <p>made by <strong>eguizabal carl anthony a.</strong></p>
+      <p>2026</p>
     </footer>
 
     <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
     <div class="toast" role="status" aria-live="polite"></div>
-
-    <dialog class="modal" id="service-modal" aria-labelledby="modal-title">
-      <button class="modal-close" type="button" aria-label="Close dialog">×</button>
-      <p class="card-kicker">CAPABILITY FILE</p>
-      <h2 id="modal-title">Service title</h2>
-      <p id="modal-description"></p>
-      <div class="modal-details" id="modal-details"></div>
-    </dialog>
-
-    <dialog class="modal console-modal" id="mission-console" aria-labelledby="console-title">
-      <button class="modal-close" type="button" aria-label="Close dialog">×</button>
-      <p class="card-kicker">AVENGERS COMMAND NETWORK</p>
-      <h2 id="console-title">Mission Console</h2>
-      <div class="console-screen" aria-live="polite">
-        <p>&gt; Identity verified: GUEST</p>
-        <p>&gt; Hub systems: ONLINE</p>
-        <p>&gt; Select a mission command.</p>
-      </div>
-      <div class="console-actions">
-        <button type="button" data-console-target="about">Scan Project</button>
-        <button type="button" data-console-target="services">View Abilities</button>
-        <button type="button" data-console-target="creator">Identify Creator</button>
-      </div>
-    </dialog>
   </body>
 </html>
